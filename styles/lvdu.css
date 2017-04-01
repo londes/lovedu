@@ -1,9 +1,44 @@
-body {
+/*body {
   background: url('/../images/justinlvdu.png') no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}*/
+:root {
+  --x-axis: 50;
+  --y-axis: 50;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url('/../images/justinlvdu.png');
+  width: 100%;
+  height: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  -webkit-filter: blur(var(${x-axis}+'px'));
+  -moz-filter: blur(var(${x-axis}+'px'));
+  -o-filter: blur(var(${x-axis}+'px'));
+  -ms-filter: blur(var(${x-axis}+'px'));
+  filter: blur(var(${x-axis}+'px'));
+}
+
+.content {
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #trashcan {
